@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AAE8996-FB19-402F-BC7E-F264CDD2745D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HotelManagement</RootNamespace>
+    <AssemblyName>HotelManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>travel-holiday-vacation-327_89074.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMRConnector">
+      <HintPath>..\..\..\..\Downloads\AMRConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDashboard.Designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\ClientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ClientControl.Designer.cs">
+      <DependentUpon>ClientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DashboardControl.Designer.cs">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ReservationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ReservationControl.Designer.cs">
+      <DependentUpon>ReservationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\RoomControl.Designer.cs">
+      <DependentUpon>RoomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UserControlSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UserControlSetting.Designer.cs">
+      <DependentUpon>UserControlSetting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl\ClientControl.resx">
+      <DependentUpon>ClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DashboardControl.resx">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ReservationControl.resx">
+      <DependentUpon>ReservationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\RoomControl.resx">
+      <DependentUpon>RoomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UserControlSetting.resx">
+      <DependentUpon>UserControlSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2849830_multimedia_options_setti %281%29.png" />
+    <None Include="Resources\2849830_multimedia_options_setti.png" />
+    <None Include="Resources\7218128_office_business_work_wor.png" />
+    <None Include="Resources\3709738_client_customer_male_req.png" />
+    <None Include="Resources\2075803_appontment_booking_calen %281%29.png" />
+    <None Include="Resources\2075803_appontment_booking_calen.png" />
+    <None Include="Resources\3793936_chair_furniture_home_hou %281%29.png" />
+    <None Include="Resources\3793936_chair_furniture_home_hou.png" />
+    <None Include="Resources\3793936_chair_furniture_home_house_room_icon-removebg-preview.png" />
+    <None Include="Resources\3793936_chair_furniture_home_house_room_icon.png" />
+    <None Include="Resources\2075803_appontment_booking_calendar_date_reservation_icon.png" />
+    <None Include="Resources\3793947_cabinet_furniture_home_house_living_icon.png" />
+    <None Include="Resources\3709738_client_customer_male_request_service_icon.png" />
+    <None Include="Resources\7218128_office_business_work_workplace_home_icon.png" />
+    <None Include="Resources\392500_estate_home_house_real_icon.png" />
+    <None Include="Resources\2530821_business man_employee_general_human_member_icon.png" />
+    <None Include="Resources\hotel-management-software-development.png" />
+    <None Include="Resources\eye_5077234.png" />
+    <None Include="Resources\eye_4735856.png" />
+    <None Include="Resources\2931142_minimize_minus_remove_line_icon.png" />
+    <None Include="Resources\4115236-delete-min-minus_114026.png" />
+    <None Include="Resources\1487086345-cross_81577.png" />
+    <None Include="Resources\7065198_humans_team_community_people_group_icon.png" />
+    <None Include="Resources\4850489_clients_communication_discussion_media_social_icon.png" />
+    <None Include="Resources\7065207_humans_community_people_group_organization_icon.png" />
+    <None Include="Resources\3793930_furniture_home_house_living_offie_icon.png" />
+    <Content Include="travel-holiday-vacation-327_89074.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
