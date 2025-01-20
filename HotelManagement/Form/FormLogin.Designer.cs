@@ -86,7 +86,7 @@
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPassword.Location = new System.Drawing.Point(108, 242);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(450, 48);
+            this.textBoxPassword.Size = new System.Drawing.Size(450, 36);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
@@ -115,7 +115,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(213)))), ((int)(((byte)(143)))));
             this.label3.Location = new System.Drawing.Point(537, 434);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 28);
+            this.label3.Size = new System.Drawing.Size(152, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Forgot Password?";
             // 
@@ -127,7 +127,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(278, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 28);
+            this.label2.Size = new System.Drawing.Size(92, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
@@ -154,7 +154,7 @@
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUsername.Location = new System.Drawing.Point(108, 107);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(484, 48);
+            this.textBoxUsername.Size = new System.Drawing.Size(484, 36);
             this.textBoxUsername.TabIndex = 1;
             this.textBoxUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -166,7 +166,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(278, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 28);
+            this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
@@ -203,9 +203,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Location = new System.Drawing.Point(225, 192);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(606, 56);
+            this.label4.Size = new System.Drawing.Size(536, 40);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Hotel Reservation System";
+            this.label4.Text = "Hotel Reservation Management";
             // 
             // pictureBox1
             // 
@@ -234,7 +234,7 @@
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1700, 1000);
