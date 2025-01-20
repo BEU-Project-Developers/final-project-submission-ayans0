@@ -1,34 +1,31 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\form\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\orxan\\desktop\\final-project-submission-ayans0\\hotelmanagement\\form\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\form\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\form\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\hotelmanagement\\form\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\form\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|C:\\Users\\Ayan\\source\\repos\\HotelManagement\\hotelmanagement\\form\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\hotelmanagement\\form\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\form\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\form\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\hotelmanagement\\form\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\form\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\ayan\\source\\repos\\hotelmanagement\\hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,11 +41,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FormLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\HotelManagement\\Form\\FormLogin.cs",
               "RelativeDocumentMoniker": "HotelManagement\\Form\\FormLogin.cs",
-              "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\HotelManagement\\Form\\FormLogin.cs",
               "RelativeToolTip": "HotelManagement\\Form\\FormLogin.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwDwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T19:04:17.448Z",
               "EditorCaption": ""
@@ -57,75 +54,68 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\HotelManagement\\Form\\FormLogin.cs",
               "RelativeDocumentMoniker": "HotelManagement\\Form\\FormLogin.cs",
               "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\Form\\FormLogin.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T19:04:13.313Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormDashboard.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\Form\\FormDashboard.cs",
-              "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormDashboard.cs",
-              "RelativeToolTip": "HotelManagement\\Form\\FormDashboard.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAwC0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:52:17.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T19:04:13.313Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DashboardControl.cs",
-              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\DashboardControl.cs",
-              "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
-              "RelativeToolTip": "HotelManagement\\UserControl\\DashboardControl.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
+              "Title": "FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\HotelManagement\\Form\\FormDashboard.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\Form\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\HotelManagement\\Form\\FormDashboard.cs",
+              "RelativeToolTip": "HotelManagement\\Form\\FormDashboard.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwC0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:34:12.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:52:17.139Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ReservationControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\ReservationControl.cs",
-              "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\UserControl\\ReservationControl.cs [Design]",
+              "Title": "DashboardControl.cs",
+              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
+              "RelativeToolTip": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:25:55.302Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-04T18:34:12.2Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ReservationControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T18:25:55.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DashboardControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
               "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\UserControl\\DashboardControl.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:23:52.956Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-04T18:23:52.956Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FormDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\orxan\\Desktop\\final-project-submission-ayans0\\HotelManagement\\Form\\FormDashboard.cs",
               "RelativeDocumentMoniker": "HotelManagement\\Form\\FormDashboard.cs",
               "ToolTip": "C:\\Users\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormDashboard.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\Form\\FormDashboard.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\Ayan\\source\\repos\\HotelManagement\\HotelManagement\\Form\\FormDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T07:11:35.127Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-04T07:11:35.127Z"
             }
           ]
         }
