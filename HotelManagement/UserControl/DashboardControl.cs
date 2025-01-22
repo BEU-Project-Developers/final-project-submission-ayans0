@@ -20,7 +20,7 @@ namespace HotelManagement.UserControl
 
         private SqlConnection GetConnection()
         {
-            string connectionString = "Data Source = .\\SQLEXPRESS;\r\n                           Initial Catalog = Hotel_Management_System;\r\n                           Integrated Security = true";
+            string connectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog=Hotel_Management_System; Integrated Security=true";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             try
             {
@@ -34,10 +34,10 @@ namespace HotelManagement.UserControl
             return sqlConnection;
         }
 
-        public int Count(string query)
+        public int Count(string query) // query=>sql sorgusu
         {
             SqlConnection connection = GetConnection();
-            SqlCommand sqlCommand = new SqlCommand(query, connection);
+            SqlCommand sqlCommand = new SqlCommand(query, connection); //for using sql query
             return (int)sqlCommand.ExecuteScalar();
         }
 
