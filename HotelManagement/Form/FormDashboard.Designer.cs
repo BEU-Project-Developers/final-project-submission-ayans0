@@ -260,6 +260,8 @@
             this.userControlReservation1.Size = new System.Drawing.Size(1376, 670);
             this.userControlReservation1.TabIndex = 3;
             this.userControlReservation1.Visible = false;
+            this.userControlReservation1.EnabledChanged += new System.EventHandler(this.userControlReservation1_EnabledChanged);
+            this.userControlReservation1.Leave += new System.EventHandler(this.userControlReservation1_Leave);
             // 
             // useControlDashboard1
             // 

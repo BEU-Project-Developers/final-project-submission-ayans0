@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\desktop\\hotelmanagement\\hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\desktop\\hotelmanagement\\hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\desktop\\hotelmanagement\\hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\desktop\\hotelmanagement\\hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\reservationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|C:\\Users\\Ayan\\Desktop\\HotelManagement\\hotelmanagement\\usercontrol\\clientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\clientcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|c:\\users\\ayan\\desktop\\hotelmanagement\\hotelmanagement\\usercontrol\\roomcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|C:\\Users\\Ayan\\Desktop\\HotelManagement\\hotelmanagement\\usercontrol\\roomcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AAE8996-FB19-402F-BC7E-F264CDD2745D}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\usercontrol\\roomcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +46,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoomControl.cs",
-              "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\RoomControl.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\RoomControl.cs",
-              "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\RoomControl.cs",
-              "RelativeToolTip": "HotelManagement\\UserControl\\RoomControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DashboardControl.cs",
+              "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\DashboardControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
+              "RelativeToolTip": "HotelManagement\\UserControl\\DashboardControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T14:46:21.106Z",
+              "WhenOpened": "2025-01-21T20:40:43.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "DashboardControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\DashboardControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\DashboardControl.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\UserControl\\DashboardControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T20:32:33.726Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReservationControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\ReservationControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\UserControl\\ReservationControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T19:21:26.375Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReservationControl.cs",
+              "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\ReservationControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\ReservationControl.cs",
+              "RelativeToolTip": "HotelManagement\\UserControl\\ReservationControl.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwB0BAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T18:28:45.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ClientControl.cs",
               "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\ClientControl.cs",
               "RelativeDocumentMoniker": "HotelManagement\\UserControl\\ClientControl.cs",
               "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\ClientControl.cs",
               "RelativeToolTip": "HotelManagement\\UserControl\\ClientControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABwBAAAAAAAAAAAuwCIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T14:46:36.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "RoomControl.cs",
+              "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\RoomControl.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\UserControl\\RoomControl.cs",
+              "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\UserControl\\RoomControl.cs",
+              "RelativeToolTip": "HotelManagement\\UserControl\\RoomControl.cs",
+              "ViewState": "AgIAANQCAAAAAAAAAAAwwOMCAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T14:46:21.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FormLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs",
               "RelativeDocumentMoniker": "HotelManagement\\Form\\FormLogin.cs",
               "ToolTip": "C:\\Users\\Ayan\\Desktop\\HotelManagement\\HotelManagement\\Form\\FormLogin.cs [Design]",
               "RelativeToolTip": "HotelManagement\\Form\\FormLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T14:31:44.287Z"
+              "WhenOpened": "2025-01-21T18:25:58.025Z"
             }
           ]
         }

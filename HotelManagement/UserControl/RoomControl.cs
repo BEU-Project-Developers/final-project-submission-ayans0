@@ -7,22 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AMRConnector;
+using System.Data.SqlClient;
+
+
+
 
 namespace HotelManagement.UserControl
 {
     public partial class RoomControl : System.Windows.Forms.UserControl
     {
-        DbConnector db;
+
+       
         private string No = "", Free = "";
         public RoomControl()
         {
             InitializeComponent();
-            db=new DbConnector();
         }
         public void Clear()
         {
-            comboBoxType.SelectedIndex = -1;
+            comboBoxType.SelectedIndex = 0;
             textBoxPhoneNo.Clear();
             radioButtonNo.Checked = false;
             radioButtonYes.Checked = false;
@@ -30,7 +33,7 @@ namespace HotelManagement.UserControl
         }
         public void Clear1()
         {
-            comboBoxType1.SelectedIndex = -1;
+            comboBoxType1.SelectedIndex = 0;
             textBoxPhoneNo1.Clear();
             radioButtonNo1.Checked = false;
             radioButtonYes1.Checked = false;
@@ -139,7 +142,7 @@ namespace HotelManagement.UserControl
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(122, 276);
+            this.label4.Location = new System.Drawing.Point(122, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 34);
             this.label4.TabIndex = 13;
@@ -157,7 +160,7 @@ namespace HotelManagement.UserControl
             "Double",
             "Family",
             "Suite"});
-            this.comboBoxType.Location = new System.Drawing.Point(128, 215);
+            this.comboBoxType.Location = new System.Drawing.Point(128, 205);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(449, 42);
             this.comboBoxType.TabIndex = 12;
@@ -169,7 +172,7 @@ namespace HotelManagement.UserControl
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(128, 380);
+            this.buttonAdd.Location = new System.Drawing.Point(128, 379);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(205, 47);
             this.buttonAdd.TabIndex = 11;
@@ -180,7 +183,7 @@ namespace HotelManagement.UserControl
             // textBoxPhoneNo
             // 
             this.textBoxPhoneNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(739, 215);
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(739, 205);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(449, 42);
             this.textBoxPhoneNo.TabIndex = 10;
@@ -190,7 +193,7 @@ namespace HotelManagement.UserControl
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(733, 169);
+            this.label3.Location = new System.Drawing.Point(733, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 34);
             this.label3.TabIndex = 9;
@@ -201,7 +204,7 @@ namespace HotelManagement.UserControl
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(122, 169);
+            this.label2.Location = new System.Drawing.Point(122, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 34);
             this.label2.TabIndex = 7;
@@ -213,7 +216,7 @@ namespace HotelManagement.UserControl
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(213)))), ((int)(((byte)(143)))));
-            this.label1.Location = new System.Drawing.Point(121, 73);
+            this.label1.Location = new System.Drawing.Point(121, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 39);
             this.label1.TabIndex = 6;
@@ -230,7 +233,7 @@ namespace HotelManagement.UserControl
             this.tabPageSearchRoom.Location = new System.Drawing.Point(4, 4);
             this.tabPageSearchRoom.Name = "tabPageSearchRoom";
             this.tabPageSearchRoom.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSearchRoom.Size = new System.Drawing.Size(1287, 613);
+            this.tabPageSearchRoom.Size = new System.Drawing.Size(1287, 623);
             this.tabPageSearchRoom.TabIndex = 1;
             this.tabPageSearchRoom.Text = "Search Room";
             this.tabPageSearchRoom.Enter += new System.EventHandler(this.tabPageSearchRoom_Enter);
@@ -341,6 +344,7 @@ namespace HotelManagement.UserControl
             this.tabPageDeleteAndUpdate.Size = new System.Drawing.Size(1287, 613);
             this.tabPageDeleteAndUpdate.TabIndex = 2;
             this.tabPageDeleteAndUpdate.Text = "Update and Delete Room";
+            this.tabPageDeleteAndUpdate.Leave += new System.EventHandler(this.tabPageDeleteAndUpdate_Leave);
             // 
             // buttonDelete
             // 
@@ -349,7 +353,7 @@ namespace HotelManagement.UserControl
             this.buttonDelete.FlatAppearance.BorderSize = 0;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(378, 414);
+            this.buttonDelete.Location = new System.Drawing.Point(378, 409);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(205, 47);
             this.buttonDelete.TabIndex = 25;
@@ -384,7 +388,7 @@ namespace HotelManagement.UserControl
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(143, 310);
+            this.label5.Location = new System.Drawing.Point(143, 305);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 34);
             this.label5.TabIndex = 22;
@@ -402,7 +406,7 @@ namespace HotelManagement.UserControl
             "Double",
             "Family",
             "Suite"});
-            this.comboBoxType1.Location = new System.Drawing.Point(149, 249);
+            this.comboBoxType1.Location = new System.Drawing.Point(149, 244);
             this.comboBoxType1.Name = "comboBoxType1";
             this.comboBoxType1.Size = new System.Drawing.Size(449, 42);
             this.comboBoxType1.TabIndex = 21;
@@ -414,7 +418,7 @@ namespace HotelManagement.UserControl
             this.buttonUpdate.FlatAppearance.BorderSize = 0;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(149, 414);
+            this.buttonUpdate.Location = new System.Drawing.Point(149, 409);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(205, 47);
             this.buttonUpdate.TabIndex = 20;
@@ -425,7 +429,7 @@ namespace HotelManagement.UserControl
             // textBoxPhoneNo1
             // 
             this.textBoxPhoneNo1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxPhoneNo1.Location = new System.Drawing.Point(760, 249);
+            this.textBoxPhoneNo1.Location = new System.Drawing.Point(760, 244);
             this.textBoxPhoneNo1.Name = "textBoxPhoneNo1";
             this.textBoxPhoneNo1.Size = new System.Drawing.Size(449, 42);
             this.textBoxPhoneNo1.TabIndex = 19;
@@ -435,7 +439,7 @@ namespace HotelManagement.UserControl
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(754, 203);
+            this.label8.Location = new System.Drawing.Point(754, 198);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(226, 34);
             this.label8.TabIndex = 18;
@@ -446,7 +450,7 @@ namespace HotelManagement.UserControl
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(143, 203);
+            this.label9.Location = new System.Drawing.Point(143, 198);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 34);
             this.label9.TabIndex = 17;
@@ -458,7 +462,7 @@ namespace HotelManagement.UserControl
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(213)))), ((int)(((byte)(143)))));
-            this.label10.Location = new System.Drawing.Point(142, 107);
+            this.label10.Location = new System.Drawing.Point(142, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(431, 39);
             this.label10.TabIndex = 16;
@@ -471,6 +475,7 @@ namespace HotelManagement.UserControl
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "RoomControl";
             this.Size = new System.Drawing.Size(1716, 959);
+            this.Load += new System.EventHandler(this.RoomControl_Load);
             this.tabControlRoom.ResumeLayout(false);
             this.tabPageAddRoom.ResumeLayout(false);
             this.tabPageAddRoom.PerformLayout();
@@ -483,12 +488,61 @@ namespace HotelManagement.UserControl
 
         }
 
+        private SqlConnection GetConnection()
+        {
+            string connectionString = "Data Source = .\\SQLEXPRESS;\r\n                           Initial Catalog = Hotel_Management_System;\r\n                           Integrated Security = true";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            try
+            {
+                sqlConnection.Open();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error! \n" + ex.ToString(), "SQL connection", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+
+            return sqlConnection;
+        }
+
+        public bool AddRoom(string Type, string Phone, string Free)
+        {
+            string cmdText = "INSERT INTO Room_Table VALUES (@Type, @Phone, @Free)";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@Type", SqlDbType.VarChar).Value = Type;
+            sqlCommand.Parameters.Add("@Phone", SqlDbType.VarChar).Value = Phone;
+            sqlCommand.Parameters.Add("@Free", SqlDbType.VarChar).Value = Free;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Added Successfully!", "Room Added", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("Phone No. already exist.", "Phone No.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Error! \n" + ex.ToString(), "Add Room", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (radioButtonYes.Checked) Free = "Yes";
             if (radioButtonNo.Checked) Free = "No";
             bool check;
-            if (comboBoxType.SelectedIndex==-1 || textBoxPhoneNo.Text.Trim()==string.Empty 
+            if (comboBoxType.SelectedIndex==0 || textBoxPhoneNo.Text.Trim()==string.Empty 
                 || Free=="")
             {
                 MessageBox.Show("Please fill out all fields.", "Require all fields",
@@ -496,7 +550,7 @@ namespace HotelManagement.UserControl
             }
             else
             {
-                check = db.AddRoom(comboBoxType.SelectedItem.ToString(),
+                check = AddRoom(comboBoxType.SelectedItem.ToString(),
                     textBoxPhoneNo.Text.Trim(),Free);
                 if (check)
                 {
@@ -516,9 +570,19 @@ namespace HotelManagement.UserControl
             Clear1();
         }
 
+        public void DisplayAndSearch(string query, DataGridView dgv)
+        {
+            SqlConnection connection = GetConnection();
+            SqlCommand selectCommand = new SqlCommand(query, connection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(selectCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dgv.DataSource = dataTable;
+        }
+
         private void tabPageSearchRoom_Enter(object sender, EventArgs e)
         {
-            db.DisplayAndSearch("SELECT * FROM Room_Table", dataGridViewRoom);
+            DisplayAndSearch("SELECT * FROM Room_Table", dataGridViewRoom);
         }
 
         private void tabPageSearchRoom_Leave(object sender, EventArgs e)
@@ -528,7 +592,7 @@ namespace HotelManagement.UserControl
 
         private void textBoxSearchRoomNo_TextChanged(object sender, EventArgs e)
         {
-            db.DisplayAndSearch("SELECT * FROM Room_Table WHERE Room_Number LIKE '%" +
+            DisplayAndSearch("SELECT * FROM Room_Table WHERE Room_Number LIKE '%" +
                 textBoxSearchRoomNo.Text + "%'", dataGridViewRoom); 
         }
 
@@ -546,6 +610,62 @@ namespace HotelManagement.UserControl
             }
         }
 
+        public bool UpdateRoom(string No, string Type, string Phone, string Free)
+        {
+            string cmdText = "UPDATE Room_Table SET Room_Type = @RoomType, Room_Phone = @RoomPhone, Room_Free = @RoomFree WHERE Room_Number = @RoomNumber";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@RoomNumber", SqlDbType.Int).Value = No;
+            sqlCommand.Parameters.Add("@RoomType", SqlDbType.VarChar).Value = Type;
+            sqlCommand.Parameters.Add("@RoomPhone", SqlDbType.VarChar).Value = Phone;
+            sqlCommand.Parameters.Add("@RoomFree", SqlDbType.VarChar).Value = Free;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully!", "Room Updated", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("Phone No. already exist.", "Phone No.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Error! \n" + ex.ToString(), "Update Room", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
+        public bool DeleteRoom(string No)
+        {
+            string cmdText = "DELETE FROM Room_Table WHERE Room_Number = @RoomNumber";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@RoomNumber", SqlDbType.Int).Value = No;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Deleted Successfully!", "Room Deleted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error! \n" + ex.ToString(), "Delete Room", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
+
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             if (radioButtonYes1.Checked) Free = "Yes";
@@ -553,14 +673,14 @@ namespace HotelManagement.UserControl
             bool check;
             if (No != "")
             {
-                if (comboBoxType1.SelectedIndex == -1 || textBoxPhoneNo1.Text.Trim() == string.Empty
+                if (comboBoxType1.SelectedIndex == 0 || textBoxPhoneNo1.Text.Trim() == string.Empty
                 || Free == "")
                 {
                     MessageBox.Show("Please fill out all fields.", "Require all fields",
                         MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else
                 {
-                    check = db.UpdateRoom(No, comboBoxType1.SelectedItem.ToString(),
+                    check = UpdateRoom(No, comboBoxType1.SelectedItem.ToString(),
                         textBoxPhoneNo1.Text.Trim(), Free);
                     if (check)
                     {
@@ -582,7 +702,7 @@ namespace HotelManagement.UserControl
             bool check;
             if (No != "")
             {
-                if (comboBoxType1.SelectedIndex == -1 || textBoxPhoneNo1.Text.Trim() == string.Empty
+                if (comboBoxType1.SelectedIndex == 0 || textBoxPhoneNo1.Text.Trim() == string.Empty
                 || Free == "")
                 {
                     MessageBox.Show("Please fill out all fields.", "Require all fields",
@@ -594,7 +714,7 @@ namespace HotelManagement.UserControl
                          "Room delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (DialogResult.Yes == result)
                     {
-                        check = db.DeleteRoom(No);
+                        check = DeleteRoom(No);
                         if (check)
                         {
                             Clear1();
@@ -607,6 +727,17 @@ namespace HotelManagement.UserControl
                 MessageBox.Show("Please first select row from table.",
                     "Seelection of row", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void RoomControl_Load(object sender, EventArgs e)
+        {
+            comboBoxType.SelectedIndex = 0;
+            comboBoxType1.SelectedIndex = 0;
+        }
+
+        private void tabPageDeleteAndUpdate_Leave(object sender, EventArgs e)
+        {
+            Clear1();
         }
 
         private void label1_Click(object sender, EventArgs e)

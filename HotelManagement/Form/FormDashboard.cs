@@ -114,5 +114,15 @@ namespace HotelManagement
         {
 
         }
+
+        private void userControlReservation1_EnabledChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlReservation1_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

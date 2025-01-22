@@ -30,30 +30,31 @@
         {
             this.tabControlReservation = new System.Windows.Forms.TabControl();
             this.tabPageAddReservation = new System.Windows.Forms.TabPage();
-            this.tabPageSearchReservation = new System.Windows.Forms.TabPage();
-            this.tabPageUpdateAndCancel = new System.Windows.Forms.TabPage();
+            this.textBoxClientID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePickerOut = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePickerIn = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxNo = new System.Windows.Forms.ComboBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.comboBoxNo = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerIn = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePickerOut = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.tabPageSearchReservation = new System.Windows.Forms.TabPage();
             this.dataGridViewReservation = new System.Windows.Forms.DataGridView();
-            this.textBoxSearchClientID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxSearchClientID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tabPageUpdateAndCancel = new System.Windows.Forms.TabPage();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxClientID1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePickerOut1 = new System.Windows.Forms.DateTimePicker();
@@ -66,12 +67,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.tabControlReservation.SuspendLayout();
             this.tabPageAddReservation.SuspendLayout();
             this.tabPageSearchReservation.SuspendLayout();
-            this.tabPageUpdateAndCancel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservation)).BeginInit();
+            this.tabPageUpdateAndCancel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlReservation
@@ -90,7 +90,7 @@
             // tabPageAddReservation
             // 
             this.tabPageAddReservation.BackColor = System.Drawing.Color.White;
-            this.tabPageAddReservation.Controls.Add(this.textBoxFirstName);
+            this.tabPageAddReservation.Controls.Add(this.textBoxClientID);
             this.tabPageAddReservation.Controls.Add(this.label6);
             this.tabPageAddReservation.Controls.Add(this.dateTimePickerOut);
             this.tabPageAddReservation.Controls.Add(this.label5);
@@ -108,43 +108,86 @@
             this.tabPageAddReservation.Size = new System.Drawing.Size(1287, 613);
             this.tabPageAddReservation.TabIndex = 0;
             this.tabPageAddReservation.Text = "Add Reservation";
+            this.tabPageAddReservation.Leave += new System.EventHandler(this.tabPageAddReservation_Leave);
             // 
-            // tabPageSearchReservation
+            // textBoxClientID
             // 
-            this.tabPageSearchReservation.BackColor = System.Drawing.Color.White;
-            this.tabPageSearchReservation.Controls.Add(this.dataGridViewReservation);
-            this.tabPageSearchReservation.Controls.Add(this.textBoxSearchClientID);
-            this.tabPageSearchReservation.Controls.Add(this.label7);
-            this.tabPageSearchReservation.Controls.Add(this.label8);
-            this.tabPageSearchReservation.Location = new System.Drawing.Point(4, 4);
-            this.tabPageSearchReservation.Name = "tabPageSearchReservation";
-            this.tabPageSearchReservation.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSearchReservation.Size = new System.Drawing.Size(1287, 613);
-            this.tabPageSearchReservation.TabIndex = 1;
-            this.tabPageSearchReservation.Text = "Search Reservation";
+            this.textBoxClientID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxClientID.Location = new System.Drawing.Point(110, 271);
+            this.textBoxClientID.Name = "textBoxClientID";
+            this.textBoxClientID.Size = new System.Drawing.Size(449, 42);
+            this.textBoxClientID.TabIndex = 28;
             // 
-            // tabPageUpdateAndCancel
+            // label6
             // 
-            this.tabPageUpdateAndCancel.BackColor = System.Drawing.Color.White;
-            this.tabPageUpdateAndCancel.Controls.Add(this.buttonCancel);
-            this.tabPageUpdateAndCancel.Controls.Add(this.textBoxClientID1);
-            this.tabPageUpdateAndCancel.Controls.Add(this.label9);
-            this.tabPageUpdateAndCancel.Controls.Add(this.dateTimePickerOut1);
-            this.tabPageUpdateAndCancel.Controls.Add(this.label10);
-            this.tabPageUpdateAndCancel.Controls.Add(this.dateTimePickerIn1);
-            this.tabPageUpdateAndCancel.Controls.Add(this.comboBoxNo1);
-            this.tabPageUpdateAndCancel.Controls.Add(this.comboBoxType1);
-            this.tabPageUpdateAndCancel.Controls.Add(this.label11);
-            this.tabPageUpdateAndCancel.Controls.Add(this.buttonUpdate);
-            this.tabPageUpdateAndCancel.Controls.Add(this.label12);
-            this.tabPageUpdateAndCancel.Controls.Add(this.label13);
-            this.tabPageUpdateAndCancel.Controls.Add(this.label14);
-            this.tabPageUpdateAndCancel.Location = new System.Drawing.Point(4, 4);
-            this.tabPageUpdateAndCancel.Name = "tabPageUpdateAndCancel";
-            this.tabPageUpdateAndCancel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUpdateAndCancel.Size = new System.Drawing.Size(1287, 613);
-            this.tabPageUpdateAndCancel.TabIndex = 2;
-            this.tabPageUpdateAndCancel.Text = "Update and Cancel Reservation";
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(105, 222);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 34);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Client ID:";
+            // 
+            // dateTimePickerOut
+            // 
+            this.dateTimePickerOut.Location = new System.Drawing.Point(722, 390);
+            this.dateTimePickerOut.Name = "dateTimePickerOut";
+            this.dateTimePickerOut.Size = new System.Drawing.Size(450, 42);
+            this.dateTimePickerOut.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(716, 336);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 34);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Out:";
+            // 
+            // dateTimePickerIn
+            // 
+            this.dateTimePickerIn.Location = new System.Drawing.Point(110, 390);
+            this.dateTimePickerIn.Name = "dateTimePickerIn";
+            this.dateTimePickerIn.Size = new System.Drawing.Size(450, 42);
+            this.dateTimePickerIn.TabIndex = 24;
+            // 
+            // comboBoxNo
+            // 
+            this.comboBoxNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxNo.FormattingEnabled = true;
+            this.comboBoxNo.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Family",
+            "Suite"});
+            this.comboBoxNo.Location = new System.Drawing.Point(722, 162);
+            this.comboBoxNo.Name = "comboBoxNo";
+            this.comboBoxNo.Size = new System.Drawing.Size(449, 42);
+            this.comboBoxNo.TabIndex = 23;
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Family",
+            "Suite"});
+            this.comboBoxType.Location = new System.Drawing.Point(111, 162);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(449, 42);
+            this.comboBoxType.TabIndex = 22;
+            this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -170,6 +213,7 @@
             this.buttonAdd.TabIndex = 19;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label3
             // 
@@ -205,84 +249,20 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Add Reservation:";
             // 
-            // comboBoxType
+            // tabPageSearchReservation
             // 
-            this.comboBoxType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Single",
-            "Double",
-            "Family",
-            "Suite"});
-            this.comboBoxType.Location = new System.Drawing.Point(111, 162);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(449, 42);
-            this.comboBoxType.TabIndex = 22;
-            this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
-            // 
-            // comboBoxNo
-            // 
-            this.comboBoxNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBoxNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxNo.FormattingEnabled = true;
-            this.comboBoxNo.Items.AddRange(new object[] {
-            "Single",
-            "Double",
-            "Family",
-            "Suite"});
-            this.comboBoxNo.Location = new System.Drawing.Point(722, 162);
-            this.comboBoxNo.Name = "comboBoxNo";
-            this.comboBoxNo.Size = new System.Drawing.Size(449, 42);
-            this.comboBoxNo.TabIndex = 23;
-            // 
-            // dateTimePickerIn
-            // 
-            this.dateTimePickerIn.Location = new System.Drawing.Point(110, 390);
-            this.dateTimePickerIn.Name = "dateTimePickerIn";
-            this.dateTimePickerIn.Size = new System.Drawing.Size(450, 42);
-            this.dateTimePickerIn.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(716, 336);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 34);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Out:";
-            // 
-            // dateTimePickerOut
-            // 
-            this.dateTimePickerOut.Location = new System.Drawing.Point(722, 390);
-            this.dateTimePickerOut.Name = "dateTimePickerOut";
-            this.dateTimePickerOut.Size = new System.Drawing.Size(450, 42);
-            this.dateTimePickerOut.TabIndex = 26;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(105, 222);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 34);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Client ID:";
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxFirstName.Location = new System.Drawing.Point(110, 271);
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(449, 42);
-            this.textBoxFirstName.TabIndex = 28;
+            this.tabPageSearchReservation.BackColor = System.Drawing.Color.White;
+            this.tabPageSearchReservation.Controls.Add(this.dataGridViewReservation);
+            this.tabPageSearchReservation.Controls.Add(this.textBoxSearchClientID);
+            this.tabPageSearchReservation.Controls.Add(this.label7);
+            this.tabPageSearchReservation.Controls.Add(this.label8);
+            this.tabPageSearchReservation.Location = new System.Drawing.Point(4, 4);
+            this.tabPageSearchReservation.Name = "tabPageSearchReservation";
+            this.tabPageSearchReservation.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSearchReservation.Size = new System.Drawing.Size(1287, 613);
+            this.tabPageSearchReservation.TabIndex = 1;
+            this.tabPageSearchReservation.Text = "Search Reservation";
+            this.tabPageSearchReservation.Enter += new System.EventHandler(this.tabPageSearchReservation_Enter);
             // 
             // dataGridViewReservation
             // 
@@ -306,38 +286,6 @@
             this.dataGridViewReservation.RowTemplate.Height = 31;
             this.dataGridViewReservation.Size = new System.Drawing.Size(1166, 330);
             this.dataGridViewReservation.TabIndex = 13;
-            // 
-            // textBoxSearchClientID
-            // 
-            this.textBoxSearchClientID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSearchClientID.Location = new System.Drawing.Point(393, 156);
-            this.textBoxSearchClientID.Name = "textBoxSearchClientID";
-            this.textBoxSearchClientID.Size = new System.Drawing.Size(449, 42);
-            this.textBoxSearchClientID.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(387, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 34);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Client ID:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(213)))), ((int)(((byte)(143)))));
-            this.label8.Location = new System.Drawing.Point(117, 62);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(283, 34);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Search Reservation:";
             // 
             // Column1
             // 
@@ -386,6 +334,77 @@
             this.Column5.MinimumWidth = 9;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // textBoxSearchClientID
+            // 
+            this.textBoxSearchClientID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSearchClientID.Location = new System.Drawing.Point(393, 156);
+            this.textBoxSearchClientID.Name = "textBoxSearchClientID";
+            this.textBoxSearchClientID.Size = new System.Drawing.Size(449, 42);
+            this.textBoxSearchClientID.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(387, 115);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 34);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Client ID:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(213)))), ((int)(((byte)(143)))));
+            this.label8.Location = new System.Drawing.Point(117, 62);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(283, 34);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Search Reservation:";
+            // 
+            // tabPageUpdateAndCancel
+            // 
+            this.tabPageUpdateAndCancel.BackColor = System.Drawing.Color.White;
+            this.tabPageUpdateAndCancel.Controls.Add(this.buttonCancel);
+            this.tabPageUpdateAndCancel.Controls.Add(this.textBoxClientID1);
+            this.tabPageUpdateAndCancel.Controls.Add(this.label9);
+            this.tabPageUpdateAndCancel.Controls.Add(this.dateTimePickerOut1);
+            this.tabPageUpdateAndCancel.Controls.Add(this.label10);
+            this.tabPageUpdateAndCancel.Controls.Add(this.dateTimePickerIn1);
+            this.tabPageUpdateAndCancel.Controls.Add(this.comboBoxNo1);
+            this.tabPageUpdateAndCancel.Controls.Add(this.comboBoxType1);
+            this.tabPageUpdateAndCancel.Controls.Add(this.label11);
+            this.tabPageUpdateAndCancel.Controls.Add(this.buttonUpdate);
+            this.tabPageUpdateAndCancel.Controls.Add(this.label12);
+            this.tabPageUpdateAndCancel.Controls.Add(this.label13);
+            this.tabPageUpdateAndCancel.Controls.Add(this.label14);
+            this.tabPageUpdateAndCancel.Location = new System.Drawing.Point(4, 4);
+            this.tabPageUpdateAndCancel.Name = "tabPageUpdateAndCancel";
+            this.tabPageUpdateAndCancel.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUpdateAndCancel.Size = new System.Drawing.Size(1287, 613);
+            this.tabPageUpdateAndCancel.TabIndex = 2;
+            this.tabPageUpdateAndCancel.Text = "Update and Cancel Reservation";
+            this.tabPageUpdateAndCancel.Leave += new System.EventHandler(this.tabPageUpdateAndCancel_Leave);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.buttonCancel.FlatAppearance.BorderSize = 0;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(352, 494);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(205, 47);
+            this.buttonCancel.TabIndex = 41;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // textBoxClientID1
             // 
@@ -464,6 +483,7 @@
             this.comboBoxType1.Name = "comboBoxType1";
             this.comboBoxType1.Size = new System.Drawing.Size(449, 42);
             this.comboBoxType1.TabIndex = 34;
+            this.comboBoxType1.SelectedIndexChanged += new System.EventHandler(this.comboBoxType1_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -489,6 +509,7 @@
             this.buttonUpdate.TabIndex = 32;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label12
             // 
@@ -524,20 +545,6 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "Update and Cancel Reservation:";
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.buttonCancel.FlatAppearance.BorderSize = 0;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(352, 494);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(205, 47);
-            this.buttonCancel.TabIndex = 41;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = false;
-            // 
             // ReservationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
@@ -548,14 +555,15 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "ReservationControl";
             this.Size = new System.Drawing.Size(1716, 959);
+            this.Load += new System.EventHandler(this.ReservationControl_Load);
             this.tabControlReservation.ResumeLayout(false);
             this.tabPageAddReservation.ResumeLayout(false);
             this.tabPageAddReservation.PerformLayout();
             this.tabPageSearchReservation.ResumeLayout(false);
             this.tabPageSearchReservation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservation)).EndInit();
             this.tabPageUpdateAndCancel.ResumeLayout(false);
             this.tabPageUpdateAndCancel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -577,7 +585,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerOut;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxClientID;
         private System.Windows.Forms.DataGridView dataGridViewReservation;
         private System.Windows.Forms.TextBox textBoxSearchClientID;
         private System.Windows.Forms.Label label7;

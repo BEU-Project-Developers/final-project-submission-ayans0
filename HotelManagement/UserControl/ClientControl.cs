@@ -2,23 +2,22 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AMRConnector;
 
 namespace HotelManagement.UserControl
 {
     public partial class ClientControl : System.Windows.Forms.UserControl
     {
-        DbConnector db;
+       
         private string ID = "";
         public ClientControl()
         {
             InitializeComponent();
-            db = new DbConnector();
         }
 
         public void Clear()
@@ -65,6 +64,113 @@ namespace HotelManagement.UserControl
 
         }
 
+        private SqlConnection GetConnection()
+        {
+            string connectionString = "Data Source = .\\SQLEXPRESS;\r\n                           Initial Catalog = Hotel_Management_System;\r\n                           Integrated Security = true";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            try
+            {
+                sqlConnection.Open();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error! \n" + ex.ToString(), "SQL connection", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+
+            return sqlConnection;
+        }
+
+
+        public bool AddClient(string FirstName, string LastName, string Phone, string Address)
+        {
+            string cmdText = "INSERT INTO Client_Table VALUES (@Client_FirstName, @Client_LastName, @Client_Phone, @Client_Address)";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@Client_FirstName", SqlDbType.VarChar).Value = FirstName;
+            sqlCommand.Parameters.Add("@Client_LastName", SqlDbType.VarChar).Value = LastName;
+            sqlCommand.Parameters.Add("@Client_Phone", SqlDbType.VarChar).Value = Phone;
+            sqlCommand.Parameters.Add("@Client_Address", SqlDbType.VarChar).Value = Address;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Added Successfully!", "Client Added", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("Phone No. already exist.", "Phone No.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Error! \n" + ex.ToString(), "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
+        public bool UpdateClient(string ID, string FirstName, string LastName, string Phone, string Address)
+        {
+            string cmdText = "UPDATE Client_Table SET Client_FirstName = @ClientFirstName, Client_LastName = @ClientLastName, Client_Phone = @ClientPhone, Client_Address = @ClientAddress WHERE Client_ID = @ClientID";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@ClientID", SqlDbType.Int).Value = ID;
+            sqlCommand.Parameters.Add("@ClientFirstName", SqlDbType.VarChar).Value = FirstName;
+            sqlCommand.Parameters.Add("@ClientLastName", SqlDbType.VarChar).Value = LastName;
+            sqlCommand.Parameters.Add("@ClientPhone", SqlDbType.VarChar).Value = Phone;
+            sqlCommand.Parameters.Add("@ClientAddress", SqlDbType.VarChar).Value = Address;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully!", "Client Updated", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("Phone No. already exist.", "Phone No.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Error! \n" + ex.ToString(), "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
+        public bool DeleteClient(string ID)
+        {
+            string cmdText = "DELETE FROM Client_Table WHERE Client_ID = @ClientID";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@ClientID", SqlDbType.Int).Value = ID;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Deleted Successfully!", "Client Deleted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error! \n" + ex.ToString(), "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             bool check;
@@ -78,7 +184,7 @@ namespace HotelManagement.UserControl
             }
             else
             {
-                check=db.AddClient(textBoxFirstName.Text.Trim(),
+                check=AddClient(textBoxFirstName.Text.Trim(),
                     textBoxLastName.Text.Trim(),
                     textBoxPhoneNo.Text.Trim(),
                     textBoxAddress.Text.Trim());
@@ -89,9 +195,19 @@ namespace HotelManagement.UserControl
             }
         }
 
+        public void DisplayAndSearch(string query, DataGridView dgv)
+        {
+            SqlConnection connection = GetConnection();
+            SqlCommand selectCommand = new SqlCommand(query, connection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(selectCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            dgv.DataSource = dataTable;
+        }
+
         private void tabPageSearchClient_Enter(object sender, EventArgs e)
         {
-            db.DisplayAndSearch("SELECT * FROM Client_Table", dataGridViewClient);
+            DisplayAndSearch("SELECT * FROM Client_Table", dataGridViewClient);
         }
 
         private void tabPageSearchClient_Leave(object sender, EventArgs e)
@@ -101,7 +217,7 @@ namespace HotelManagement.UserControl
 
         private void textBoxSearchPhoneNo_TextChanged(object sender, EventArgs e)
         {
-            db.DisplayAndSearch("SELECT * FROM Client_Table WHERE Client_Phone LIKE '%" +
+            DisplayAndSearch("SELECT * FROM Client_Table WHERE Client_Phone LIKE '%" +
                 textBoxSearchPhoneNo.Text + "%'", dataGridViewClient);
         }
 
@@ -120,7 +236,7 @@ namespace HotelManagement.UserControl
                 }
                 else
                 {
-                    check = db.UpdateClient(ID, textBoxFirstName1.Text.Trim(),
+                    check = UpdateClient(ID, textBoxFirstName1.Text.Trim(),
                         textBoxLastName1.Text.Trim(),
                         textBoxPhoneNO1.Text.Trim(),
                         textBoxAddress1.Text.Trim());
@@ -157,7 +273,7 @@ namespace HotelManagement.UserControl
                         "Client delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (DialogResult.Yes == result)
                     {
-                        check = db.DeleteClient(ID);
+                        check = DeleteClient(ID);
                         if (check)
                         {
                             Clear1();
