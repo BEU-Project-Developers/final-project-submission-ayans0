@@ -48,7 +48,7 @@
             this.panel2.Controls.Add(this.labelClientCount);
             this.panel2.Controls.Add(this.labelClient);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(74, 157);
+            this.panel2.Location = new System.Drawing.Point(77, 92);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1326, 132);
             this.panel2.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.panel3.Controls.Add(this.labelRoomCount);
             this.panel3.Controls.Add(this.labelRoom);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Location = new System.Drawing.Point(74, 361);
+            this.panel3.Location = new System.Drawing.Point(77, 296);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1326, 134);
             this.panel3.TabIndex = 1;

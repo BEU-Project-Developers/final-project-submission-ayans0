@@ -26,7 +26,7 @@ namespace HotelManagement.UserControl
             textBoxFirstName.Clear();
             textBoxPhoneNo.Clear();
             textBoxAddress.Clear();
-            tabControlClient.SelectedTab = tabPageAddClient;
+            tabControlClient.SelectedTab = tabPageAddClient; //add client hissesinde qalmasi ucun
         }
 
         private void Clear1()
@@ -83,7 +83,7 @@ namespace HotelManagement.UserControl
 
         public bool AddClient(string FirstName, string LastName, string Phone, string Address)
         {
-            string cmdText = "INSERT INTO Client_Table VALUES (@Client_FirstName, @Client_LastName, @Client_Phone, @Client_Address)";
+            string cmdText = "INSERT INTO Client_Table VALUES (@Client_FirstName, @Client_LastName, @Client_Phone, @Client_Address)"; //formda doldurulanlar
             SqlConnection connection = GetConnection();
             SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
             sqlCommand.CommandType = CommandType.Text;

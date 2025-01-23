@@ -263,7 +263,7 @@
             this.tabPageSearchReservation.TabIndex = 1;
             this.tabPageSearchReservation.Text = "Search Reservation";
             this.tabPageSearchReservation.Enter += new System.EventHandler(this.tabPageSearchReservation_Enter);
-            // 
+            this.tabPageSearchReservation.Leave += new System.EventHandler(this.tabPageSearchReservation_Leave); 
             // dataGridViewReservation
             // 
             this.dataGridViewReservation.AllowUserToAddRows = false;
@@ -286,6 +286,9 @@
             this.dataGridViewReservation.RowTemplate.Height = 31;
             this.dataGridViewReservation.Size = new System.Drawing.Size(1166, 330);
             this.dataGridViewReservation.TabIndex = 13;
+            this.dataGridViewReservation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservation_CellClick);
+            this.dataGridViewReservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReservation_CellClick);
+
             // 
             // Column1
             // 
@@ -342,6 +345,7 @@
             this.textBoxSearchClientID.Name = "textBoxSearchClientID";
             this.textBoxSearchClientID.Size = new System.Drawing.Size(449, 42);
             this.textBoxSearchClientID.TabIndex = 12;
+            this.textBoxSearchClientID.TextChanged += new System.EventHandler(this.textBoxSearchClientID_TextChanged);
             // 
             // label7
             // 

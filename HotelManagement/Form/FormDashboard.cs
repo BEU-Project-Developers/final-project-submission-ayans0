@@ -31,7 +31,7 @@ namespace HotelManagement
 
         private void MovePanel(Control btn)
         {
-            panelSliide.Top= btn.Top;
+            panelSliide.Top= btn.Top; //panelin top, buttonun top
             panelSliide.Height= btn.Height;
         }
 
@@ -41,7 +41,7 @@ namespace HotelManagement
                 "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(DialogResult.Yes==result)
             {
-                timer1.Stop();
+               
                 this.Close();
             }
         }
@@ -92,13 +92,6 @@ namespace HotelManagement
             useControlDashboard1.Hide();
         }
 
-        private void buttonSetting_Click(object sender, EventArgs e)
-        {
-            userControlClient1.Hide();
-            userControlRoom1.Hide();
-            userControlReservation1.Hide();
-            useControlDashboard1.Hide();
-        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -121,6 +114,11 @@ namespace HotelManagement
         }
 
         private void userControlReservation1_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

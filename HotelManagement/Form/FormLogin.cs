@@ -35,11 +35,6 @@ namespace HotelManagement
             toolTip1.SetToolTip(pictureBoxClose, "Close");
         }
 
-        private void pictureBoxMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -74,7 +69,7 @@ namespace HotelManagement
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
                 connection.Close();
-                if (dataTable.Rows.Count > 0)
+                if (dataTable.Rows.Count > 0)   // eger tablede data varsa isleyir
                 {
                     check = true;
                 }

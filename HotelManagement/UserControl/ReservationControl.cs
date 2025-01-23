@@ -19,22 +19,6 @@ namespace HotelManagement.UserControl
             InitializeComponent();
         }
 
-        private SqlConnection GetConnection()
-        {
-            string connectionString = "Data Source = .\\SQLEXPRESS;\r\n                           Initial Catalog = Hotel_Management_System;\r\n                           Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(connectionString);
-            try
-            {
-                sqlConnection.Open();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error! \n" + ex.ToString(), "SQL connection", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-
-            return sqlConnection;
-        }
-
         public void Clear()
         {
             comboBoxType.SelectedIndex = 0;
@@ -55,24 +39,26 @@ namespace HotelManagement.UserControl
             RID = "";
         }
 
-        public void UpdateReservationRoom(string No, string Free)
+        private void tabPageAddReservation_Leave(object sender, EventArgs e)
         {
-            string cmdText = "UPDATE Room_Table SET Room_Free = @RoomFree WHERE Room_Number = @RoomNumber";
-            SqlConnection connection = GetConnection();
-            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
-            sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.Parameters.Add("@RoomNumber", SqlDbType.Int).Value = No;
-            sqlCommand.Parameters.Add("@RoomFree", SqlDbType.VarChar).Value = Free;
+            Clear();
+            Clear1();
+        }
+
+        private SqlConnection GetConnection()
+        {
+            string connectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog=Hotel_Management_System; Integrated Security=true"; 
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
             try
             {
-                sqlCommand.ExecuteNonQuery();
+                sqlConnection.Open();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Error! \n" + ex.ToString(), "Update Reservation", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Error! \n" + ex.ToString(), "SQL connection", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
 
-            connection.Close();
+            return sqlConnection;
         }
 
         public bool AddReservation(string Type, string No, string CID, string In, string Out)
@@ -109,6 +95,28 @@ namespace HotelManagement.UserControl
             return true;
         }
 
+
+        public void UpdateReservationRoom(string No, string Free)
+        {
+            string cmdText = "UPDATE Room_Table SET Room_Free = @RoomFree WHERE Room_Number = @RoomNumber";
+            SqlConnection connection = GetConnection();
+            SqlCommand sqlCommand = new SqlCommand(cmdText, connection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Parameters.Add("@RoomNumber", SqlDbType.Int).Value = No;
+            sqlCommand.Parameters.Add("@RoomFree", SqlDbType.VarChar).Value = Free;
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error! \n" + ex.ToString(), "Update Reservation", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+
+            connection.Close();
+        }
+
+   
         public bool UpdateReservation(string RID, string Type, string No, string CID, string In, string Out)
         {
             string cmdText = "UPDATE Reservation_Table SET Reservation_Room_Type = @ReservationRoomType, Reservation_Room_Number = @ReservationRoomNumber, Reservation_Client_ID = @ReservationClientID, Reservation_In = @ReservationIn, Reservation_Out = @ReservationOut WHERE Reservation_ID = @ReservationID";
@@ -181,31 +189,10 @@ namespace HotelManagement.UserControl
         }
     
 
-        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            RoomTypeAndNo("SELECT Room_Number FROM Room_Table WHERE Room_Type = '" +
-                comboBoxType.SelectedItem.ToString() +
-                "'AND Room_Free='Yes' ORDER BY Room_Number", comboBoxNo);
-        }
-
-        private void ReservationControl_Load(object sender, EventArgs e)
-        {
-            comboBoxType.SelectedIndex = 0;
-            comboBoxNo1.SelectedIndex = 0;
-            comboBoxNo.SelectedIndex = 0;
-            comboBoxType1.SelectedIndex = 0;
-        }
-
-        private void tabPageAddReservation_Leave(object sender, EventArgs e)
-        {
-            Clear();
-            Clear1();
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             bool check;
-            if (comboBoxType.SelectedIndex==0 ||
+            if (comboBoxType.SelectedIndex == 0 ||
                 comboBoxNo.SelectedIndex == 0 ||
                 textBoxClientID.Text.Trim() == string.Empty)
             {
@@ -250,18 +237,10 @@ namespace HotelManagement.UserControl
                 textBoxSearchClientID.Text + "%'", dataGridViewReservation);
         }
 
-        private void dataGridViewReservation_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
-              if(e.RowIndex!=-1)
-            {
-                DataGridViewRow row = dataGridViewReservation.Rows[e.RowIndex];
-                RID = row.Cells[0].Value.ToString();
-                comboBoxType1.SelectedItem = row.Cells[1].Value.ToString();
-                No = row.Cells[2].Value.ToString();
-                textBoxClientID1.Text = row.Cells[3].Value.ToString();
-                dateTimePickerIn.Text = row.Cells[4].Value.ToString();
-                dateTimePickerOut1.Text = row.Cells[5].Value.ToString();
-            }
+            RoomTypeAndNo("SELECT Room_Number FROM Room_Table WHERE Room_Type = '" +
+                comboBoxType.SelectedItem.ToString() + "'AND Room_Free='Yes' ORDER BY Room_Number", comboBoxNo);
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -278,8 +257,8 @@ namespace HotelManagement.UserControl
                 }
                 else
                 {
-                    check = UpdateReservation(RID, comboBoxType.SelectedItem.ToString(),
-                    comboBoxNo.SelectedItem.ToString(),
+                    check = UpdateReservation(RID, comboBoxType1.SelectedItem.ToString(),
+                    comboBoxNo1.SelectedItem.ToString(),
                     textBoxClientID1.Text.Trim(),
                     dateTimePickerIn1.Text, dateTimePickerOut1.Text);
                     UpdateReservationRoom(No, "Yes");
@@ -335,16 +314,41 @@ namespace HotelManagement.UserControl
             Clear1();
         }
 
+
+        private void dataGridViewReservation_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridViewReservation.Rows[e.RowIndex];
+                RID = row.Cells[0].Value.ToString();
+                comboBoxType1.SelectedItem = row.Cells[1].Value.ToString();
+                No = row.Cells[2].Value.ToString();
+                textBoxClientID1.Text = row.Cells[3].Value.ToString();
+                dateTimePickerIn1.Text = row.Cells[4].Value.ToString();
+                dateTimePickerOut1.Text = row.Cells[5].Value.ToString();
+            }
+        }
+
         private void comboBoxType1_SelectedIndexChanged(object sender, EventArgs e)
         {
             RoomTypeAndNo("SELECT Room_Number FROM Room_Table WHERE Room_Type = '" +
-               comboBoxType1.SelectedItem.ToString() +
-               "'AND Room_Free='Yes' ORDER BY Room_Number", comboBoxNo1);
+               comboBoxType1.SelectedItem.ToString() + "'AND Room_Free='Yes' ORDER BY Room_Number", comboBoxNo1);
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void ReservationControl_Load(object sender, EventArgs e)
+        {
+            comboBoxType.SelectedIndex = 0;
+            comboBoxNo.SelectedIndex = 0;
+
+            comboBoxType1.SelectedIndex = 0;
+            comboBoxNo1.SelectedIndex = 0;
+        }
+
+
     }
 }
